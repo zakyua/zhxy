@@ -1,0 +1,85 @@
+package cn.bxait.zhxy.pojo;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import java.io.Serializable;
+import lombok.Data;
+
+/**
+ * 
+ * @TableName tb_student
+ */
+@TableName(value ="tb_student")
+@Data
+public class Student implements Serializable {
+    /**
+     * 
+     */
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
+
+    /**
+     * 
+     */
+    @TableField(value = "sno")
+    private String sno;
+
+    /**
+     * 
+     */
+    @TableField(value = "name")
+    private String name;
+
+    /**
+     * 
+     */
+    @TableField(value = "gender")
+    private String gender;
+
+    /**
+     * 
+     */
+    @TableField(value = "password")
+    private String password;
+
+    /**
+     * 
+     */
+    @TableField(value = "email")
+    private String email;
+
+    /**
+     * 
+     */
+    @TableField(value = "telephone")
+    private String telephone;
+
+    /**
+     * 
+     */
+    @TableField(value = "address")
+    private String address;
+
+    /**
+     * 
+     */
+    @TableField(value = "introducation")
+    private String introducation;
+
+    /**
+     * 
+     */
+    @TableField(value = "portrait_path")
+    private String portrait_path;
+
+    /**
+     * 
+     */
+    @TableField(value = "clazz_name")
+    private String clazz_name;
+
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
+}
